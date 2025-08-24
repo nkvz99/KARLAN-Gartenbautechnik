@@ -1,0 +1,179 @@
+.services-section {
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;           
+  gap: 2.5rem;             
+  justify-content: center;   
+}
+
+.service-card {
+  flex: 0 1 30%;      
+  max-width: 50%;      
+  min-width: 30.8%;    
+  height: 400px;       
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+  height: 60%;      
+  overflow: hidden;
+  position: relative;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+   object-fit: cover;
+  display: block;
+}
+
+.service-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(1px); 
+  pointer-events: none;
+  z-index: 1; 
+}
+
+.service-title {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.service-content {
+  height: 40%;       
+  padding: 1rem;
+}
+
+.service-content p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.card {
+  text-align: center;  
+  font-size: 2.3rem;    
+  font-weight: bold;   
+  margin: 0.5rem 0 2rem 0;    
+}
+@media (max-width: 1520px) {
+  .service-card {
+    flex: 0 1 32%;
+    min-width: 32%;
+    height: 380px;
+  }
+
+  .service-title {
+    font-size: 1.2rem;
+  }
+
+  .service-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .service-card {
+    flex: 0 1 45%;
+    min-width: 45%;
+    height: 370px;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .services-container {
+    gap: 2rem;
+  }
+
+  .service-card {
+    flex: 0 1 46%;
+    min-width: 46%;
+    height: 360px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    flex: 0 1 90%;
+    min-width: 90%;
+    max-width: 90%;
+    height: 350px;
+  }
+
+  .service-title {
+    font-size: 1rem;
+  }
+
+  .service-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 463px) {
+  .service-card {
+    flex: 0 1 95%;
+    min-width: 95%;
+    height: 320px;
+  }
+
+  .service-title {
+    font-size: 0.95rem;
+  }
+
+  .service-content {
+    padding: 0.8rem;
+  }
+
+  .service-content p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 412px) {
+  .service-card {
+    height: 300px;
+  }
+
+  .service-title {
+    font-size: 0.9rem;
+  }
+
+  .service-content p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
