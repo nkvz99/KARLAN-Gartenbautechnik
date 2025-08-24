@@ -14,7 +14,7 @@ html, body {
   justify-content: space-between;
   padding: 0 2rem;
   height: 100px;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -72,11 +72,12 @@ html, body {
    cursor: pointer;
 }
 
-.navbar-button a {
+.navbar-button a,
+.book-consultation-mobile a {
   padding: 0.6rem 1.2rem;
   font-size: 1.1rem;
   background-color: #1eac44;
-  color: white;
+  color: white !important;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
@@ -85,11 +86,21 @@ html, body {
    cursor: pointer;
 }
 
-.navbar-button a:hover {
+.navbar-button a:hover,
+.book-consultation-mobile a:hover {
   background-color: #159b34;
   transform: translateY(-2px);
 }
+.book-consultation-mobile{
+  color:white !important;
+}
+.book-consultation-mobile a:hover{
+  color: white !important;
 
+}
+.book-consultation-mobile a::after{
+  display: none;
+}
 .desktop-only {
   display: block;
 }

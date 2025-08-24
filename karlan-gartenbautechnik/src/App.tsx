@@ -1,4 +1,5 @@
 import './App.css'
+import AboutUs from './components/AboutUs/AboutUs'
 import Navbar from "./components/NavBar/NavBar";
 import Hero from './components/HeroSection/HeroSection'
 import ServicesCards from './components/ServiceCards/ServiceCards'
@@ -9,6 +10,7 @@ function App() {
 <Navbar />
 <Hero />
 <ServicesCards />
+<AboutUs />
     </>
   )
 }
