@@ -29,7 +29,7 @@ export default function Navbar() {
             <ScrollLink to="contact" smooth duration={500} offset={-130} onClick={() => setMenuOpen(false)}>Contact</ScrollLink>
           </li>
 
-          <li className="mobile-only">
+          <li className="mobile-only book-consultation-mobile">
             <ScrollLink to="book" smooth duration={500} offset={-130} onClick={() => setMenuOpen(false)}>
               Book Consultation
             </ScrollLink>
