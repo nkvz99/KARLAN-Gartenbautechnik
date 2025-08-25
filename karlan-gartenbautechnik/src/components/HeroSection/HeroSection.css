@@ -2,8 +2,10 @@
   position: relative;
   width: 95%;
   height: 70vh;
-  margin: 0 auto;
+  
+  margin: 0 auto;;
   overflow: hidden;
+  margin-top: 6%;
 }
 
 .slide {

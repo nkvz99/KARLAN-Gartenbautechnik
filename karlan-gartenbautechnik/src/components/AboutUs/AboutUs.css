@@ -1,51 +1,58 @@
-*, *::after, *::before {
-  margin-top: 1%;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 
 .aboutus-container {
-    
-    margin: 0 2cm;
+
+    margin: 0 clamp(1rem, 5vw, 3rem);
     width: auto;
-    height: 52vh;
+
+    min-height: clamp(20vh, 40vh, 60vh);
+    height: 50vh; 
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background-color: #f8f9fa;
-    padding: 30px 40px;
-    gap: 30px;
     
-    
+
+    padding: clamp(1rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
+
+    gap: clamp(1rem, 3vw, 2rem);
+    flex-wrap: wrap; 
 }
 
 .header-aboutus {
     max-width: 55%;
+  
+    flex: 1 1 300px;
 }
 
 .header-aboutus h2 {
-    font-size: 2.5rem;
+ 
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: bold;
     color: #2c3e50;
-    margin-bottom: 10%;
+
+    margin-bottom: clamp(1rem, 3vw, 2rem);
     line-height: 1.2;
 }
 
 .text-aboutus {
-    margin-top: 5.5%;
+
+    margin-top: clamp(1rem, 2vw, 1.5rem);
 }
 
 .text1.aboutus {
-    font-size: 1.1rem;
+
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
     line-height: 1.6;
     color: #555;
-    margin-bottom: 2.5%;
+
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
     text-align: justify;
 }
 
 .text2.aboutus {
-    font-size: 1.1rem;
+
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
     line-height: 1.6;
     color: #555;
     text-align: justify;
@@ -57,177 +64,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 5%;
-    margin-top: 1.5%;
-    
+
+    margin-right: clamp(1rem, 2vw, 2rem);
+    margin-top: clamp(0.5rem, 1.5vw, 1rem);
+
+    flex: 0 0 auto;
+    min-width: 200px;
 }
 
 .img-aboutus {
     width: 100%;
-    height: 30%;
+
+    height: auto;
+    min-height: clamp(200px, 25vw, 350px);
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Адаптивна сенка */
+    box-shadow: 0 clamp(2px, 0.5vw, 6px) clamp(8px, 2vw, 20px) rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
 
-
-
-/* Large tablets and small desktops */
-@media (max-width: 1244px) {
-    .aboutus-container {
-        margin: 0 1.5cm;
-        padding: 25px 30px;
-        height: 48vh;
-    }
-    
-    .header-aboutus h2 {
-        font-size: 2.2rem;
-        margin-bottom: 8%;
-    }
-    
-    .text1.aboutus,
-    .text2.aboutus {
-        font-size: 1rem;
-    }
-    
-    .photo-aboutus {
-        max-width: 32%;
-    }
-}
-
-/* Medium tablets/laptops - критичен опсег */
-@media (max-width: 1119px) and (min-width: 769px) {
-    .aboutus-container {
-        height: auto;
-        min-height: 55vh;
-        padding: 25px 30px;
-        gap: 25px;
-    }
-    
-    .header-aboutus {
-        max-width: 60%;
-    }
-    
-    .header-aboutus h2 {
-        font-size: 2.1rem;
-        margin-bottom: 6%;
-    }
-    
-    .text1.aboutus,
-    .text2.aboutus {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-    
-    .photo-aboutus {
-        max-width: 55%;
-    }
-    
-    .img-aboutus {
-        height: 20%;
-    }
-}
-
-/* Tablets */
-@media (max-width: 768px) {
-    .aboutus-container {
-        flex-direction: column;
-        margin: 0 1cm;
-        height: auto;
-        min-height: 60vh;
-        padding: 30px 20px;
-        gap: 20px;
-    }
-    
-    .header-aboutus {
-        max-width: 100%;
-    }
-    
-    .header-aboutus h2 {
-        font-size: 2rem;
-        margin-bottom: 5%;
-        text-align: center;
-    }
-    
-    .text-aboutus {
-        margin-top: 3%;
-    }
-    
-    .text1.aboutus {
-        margin-bottom: 4%;
-        font-size: 1.05rem;
-    }
-    
-    .text2.aboutus {
-        font-size: 1.05rem;
-    }
-    
-    .photo-aboutus {
-        max-width: 80%;
-        margin: 0 auto;
-        margin-top: 3%;
-    }
-    
-    .img-aboutus {
-        height: auto;
-        max-height: 400px;
-    }
-}
-
-/* Mobile phones */
-@media (max-width: 480px) {
-    .aboutus-container {
-        margin: 0 0.5cm;
-        padding: 20px 15px;
-        min-height: 70vh;
-    }
-    
-    .header-aboutus h2 {
-        font-size: 1.8rem;
-        margin-bottom: 6%;
-    }
-    
-    .text-aboutus {
-        margin-top: 4%;
-    }
-    
-    .text1.aboutus,
-    .text2.aboutus {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-    
-    .text1.aboutus {
-        margin-bottom: 5%;
-    }
-    
-    .photo-aboutus {
-        max-width: 95%;
-        margin-top: 5%;
-    }
-    
-    .img-aboutus {
-        max-height: 300px;
-    }
-}
-
-/* Small mobile phones */
-@media (max-width: 320px) {
-    .aboutus-container {
-        margin: 0 0.3cm;
-        padding: 15px 10px;
-    }
-    
-    .header-aboutus h2 {
-        font-size: 1.6rem;
-    }
-    
-    .text1.aboutus,
-    .text2.aboutus {
-        font-size: 0.9rem;
-    }
-    
-    .img-aboutus {
-        max-height: 250px;
-    }
-}
