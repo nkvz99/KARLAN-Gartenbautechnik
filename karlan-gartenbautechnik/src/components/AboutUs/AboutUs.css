@@ -1,32 +1,34 @@
-
-
 .aboutus-container {
 
-    margin: 0 clamp(1rem, 5vw, 3rem);
     width: auto;
 
     min-height: clamp(20vh, 40vh, 60vh);
-    height: 50vh; 
+    height: 40vh;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background-color: #f8f9fa;
-    
+    margin-inline: 2.5%;
 
-    padding: clamp(1rem, 4vw, 2.5rem) clamp(1.5rem, 5vw, 3rem);
 
-    gap: clamp(1rem, 3vw, 2rem);
-    flex-wrap: wrap; 
+
+
+    padding-left: clamp(1.0rem, 1vw, 3rem);
+    padding-right: 0;
+
+
+    flex-wrap: wrap;
 }
 
 .header-aboutus {
     max-width: 55%;
-  
+    margin: 1%;
+
     flex: 1 1 300px;
 }
 
 .header-aboutus h2 {
- 
+
     font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: bold;
     color: #2c3e50;
@@ -60,13 +62,16 @@
 }
 
 .photo-aboutus {
-    max-width: 28%;
+    max-width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
-    margin-right: clamp(1rem, 2vw, 2rem);
-    margin-top: clamp(0.5rem, 1.5vw, 1rem);
+
+
+
+
 
     flex: 0 0 auto;
     min-width: 200px;
@@ -74,12 +79,37 @@
 
 .img-aboutus {
     width: 100%;
-
-    height: auto;
-    min-height: clamp(200px, 25vw, 350px);
     border-radius: 8px;
-    /* Адаптивна сенка */
-    box-shadow: 0 clamp(2px, 0.5vw, 6px) clamp(8px, 2vw, 20px) rgba(0, 0, 0, 0.1);
-    object-fit: cover;
+    clip-path: inset(40px 0 60px 0 round 8px);
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: inset(40px 0 60px 0);
+
+
+
+
 }
 
+
+/* @keyframes breathing {
+    0% { 
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    50% { 
+        transform: scale(1.08);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+    100% { 
+        transform: scale(1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.img-aboutus {
+    animation: breathing 3s infinite ease-in-out;
+} */
